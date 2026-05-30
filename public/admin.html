@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Coral Harbor — Fleet Admin</title>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Fleet status (legacy)</h1>
+    <p>Prefer Coral Console. This page loads snapshot data from <code>/api/v1/fleet/snapshot</code>.</p>
+    <pre id="out">Loading…</pre>
+    <script>
+      $(function () {
+        $.getJSON("/api/v1/fleet/snapshot")
+          .done(function (data) {
+            $("#out").text(JSON.stringify(data, null, 2));
+          })
+          .fail(function () {
+            $("#out").text("API unavailable");
+          });
+      });
+    </script>
+  </body>
+</html>
