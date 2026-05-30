@@ -49,3 +49,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md). Internal team only.
 ## License
 
 MIT — see [LICENSE](./LICENSE).
+
+## Harbor Console
+
+Staging dashboard: [Coral Harbor](https://harbor.coral.dev) (internal).
